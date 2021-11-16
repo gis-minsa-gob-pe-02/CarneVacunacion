@@ -1,0 +1,247 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!--    <base href="https://gis.minsa.gob.pe/CarneVacunacion/">-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../src/jquery.qrcode.js"></script>
+    <script type="text/javascript" src="../src/qrcode.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FWED2G8KFJ');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Puedes verificar la aplicación de tu vacuna contra el coronavirus u otras que hayas recibido recientemente en el Carné de vacunación web del Ministerio de Salud. Aquí, está registrada la fecha y lugar donde se te inmunizó, además del tipo de vacuna que recibiste, el fabricante de la vacuna y el número de lote.">
+    <meta name="keywords" content="Carnet Vacunas, Minsa, Covid19">
+    <meta name="author" content="Minsa Perú">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>MINSA - Carnet Vacunación</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="static/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="static/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="static/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="static/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="static/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="static/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="static/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="static/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="static/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="static/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="static/favicons/favicon.ico">
+    <link rel="manifest" href="static/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#b7e3e4">
+    <meta name="msapplication-TileImage" content="static/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#b7e3e4">
+    <link id="app-template" rel="stylesheet" href="static/css/app5.css">
+</head>
+<body>
+<div class="app" id="japp">
+    <style>
+        body {
+            font-family: sans-serif;
+            font-size: 1rem;
+            line-height: 1.2em;
+            margin: 0;
+            background: #e4e4e4;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+        .page-container {
+            padding: 30px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+        }
+        .titulo {
+            color: #75a5d0;
+            text-align: center;
+            font-weight: bold;
+            padding: 0.5rem 0.2rem;
+        }
+        .txt-titulo{
+            font-weight: bold;
+        }
+        .txt-resultado{
+            font-size: 0.8rem;
+        }
+        .logo {
+            text-align: center;
+        }
+        .logo img {
+            width: 100%;
+            max-width: 17rem;
+        }
+        .linea{
+            display: block;
+            border: none;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            margin-left: auto;
+            margin-right: auto;
+            border-top: #e2e2e2 dashed 1px;
+        }
+        .caja-vacunas{
+            border: #c8d5d5  solid 5px;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+        }
+    </style>
+    <div class="page-container">
+        <div class="logo">
+            <img src="https://gis.minsa.gob.pe/CarneVacunacion/1635280457195app/publico/certificado/img/logo_minsa.jpg" alt="Ministerio de Salud - MINSA | Gobierno del Perú">
+        </div>
+        <div class="titulo">
+            CERTIFICADO DE VACUNACIÓN / VACCINATION CERTIFICATE
+        </div>
+        <div style="text-align: center; padding: 0.5rem 0;">
+            <!--            <canvas id="cImage-qr" style="width: 90px; margin: 0 auto;" height="90" width="90"></canvas>-->
+            <div id="qrcodeTable" align="center"></div>
+            <div>
+                Código QR de Validación / Validation QR Code
+            </div>
+        </div>
+        <hr class="linea">
+        <div class="txt-titulo">
+            Nombre / Name
+        </div>
+        <div id="nombres-apellidos" class="txt-resultado">
+            LADY DIANA CASAS HURTADO
+        </div>
+        <hr class="linea">
+        <div class="txt-titulo">
+            Documento de Identidad / Identification document
+        </div>
+        <div id="nombres-apellidos" class="txt-resultado">
+            DNI: 41615205
+        </div>
+        <hr class="linea">
+        <div class="txt-titulo">
+            Fecha de Nacimiento / Date of birth
+        </div>
+        <div id="nombres-apellidos" class="txt-resultado">
+            20/02/1982
+        </div>
+        <hr class="linea">
+        <div class="txt-titulo">
+            Sexo / Sex
+        </div>
+        <div id="nombres-apellidos" class="txt-resultado">
+            F
+        </div>
+        <hr class="linea">
+        <div class="txt-titulo">
+            Nacionalidad / Nationality
+        </div>
+        <div id="nombres-apellidos" class="txt-resultado">
+            PERU
+        </div>
+        <hr class="linea">
+        <div class="txt-titulo">
+            Vacunado / Vaccinated
+        </div>
+        <div id="nombres-apellidos" class="txt-resultado">
+            2 de 2
+        </div>
+        <div>
+            <div class="caja-vacunas">
+                <div class="txt-titulo" style="color: #848f8f;">
+                    Dosis / Dose
+                </div>
+                <div id="nombres-apellidos" class="txt-resultado">
+                    1ª dosis
+                </div>
+                <hr class="linea">
+                <div class="txt-titulo">
+                    Fecha de Vacunación / Vaccination Date
+                </div>
+                <div id="nombres-apellidos" class="txt-resultado">
+                    06/10/2021
+                </div>
+                <hr class="linea">
+                <div class="txt-titulo">
+                    Vacuna / Vaccine
+                </div>
+                <div id="nombres-apellidos" class="txt-resultado">
+                    Vacuna contra Covid
+                </div>
+                <hr class="linea">
+                <div class="txt-titulo">
+                    Fabricante y Lote de Vacuna / Product Name and Manufacturer Lot Number
+                </div>
+                <div id="nombres-apellidos" class="txt-resultado">
+                    SINOPHARM (202107B1921)
+                </div>
+                <hr class="linea">
+                <div class="txt-titulo">
+                    Lugar de Vacunación / Vaccination Place
+                </div>
+                <div id="nombres-apellidos" class="txt-resultado">
+                    LIMA NORTE - Colegio Estados Unidos, Comas - LIMA LIMA COMAS
+                </div>
+            </div>
+            <div class="caja-vacunas">
+                <div class="txt-titulo" style="color: #848f8f;">
+                    Dosis / Dose
+                </div>
+                <div id="nombres-apellidos" class="txt-resultado">
+                    2ª dosis
+                </div>
+                <hr class="linea">
+                <div class="txt-titulo">
+                    Fecha de Vacunación / Vaccination Date
+                </div>
+                <div id="nombres-apellidos" class="txt-resultado">
+                    20/10/2021
+                </div>
+                <hr class="linea">
+                <div class="txt-titulo">
+                    Vacuna / Vaccine
+                </div>
+                <div id="nombres-apellidos" class="txt-resultado">
+                    Vacuna contra Covid
+                </div>
+                <hr class="linea">
+                <div class="txt-titulo">
+                    Fabricante y Lote de Vacuna / Product Name and Manufacturer Lot Number
+                </div>
+                <div id="nombres-apellidos" class="txt-resultado">
+                    SINOPHARM (B2021082372)
+                </div>
+                <hr class="linea">
+                <div class="txt-titulo">
+                    Lugar de Vacunación / Vaccination Place
+                </div>
+                <div id="nombres-apellidos" class="txt-resultado">
+                    LIMA NORTE - Universidad Cesar Vallejo - Lima Norte - LIMA LIMA LOS OLIVOS
+                </div>
+            </div>
+        </div>
+        <div style="border-top:#d7dadd dashed  1px; margin-top: 1rem; padding-top: 0.5rem; color: rgb(145, 141, 141);">
+            <div>
+                Fecha de Emisión / Date of Issue
+            </div>
+            <div>
+                16/11/2021 16:27
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    //jQuery('#qrcode').qrcode("this plugin is great");
+    jQuery('#qrcodeTable').qrcode({
+        text: "https://saulvidal.github.io/prueba1/cartillas/ladydiana.html",
+        width: 90,
+        height: 90,
+    });
+</script>
+</body>
+</html>
