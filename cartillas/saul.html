@@ -39,7 +39,7 @@
     <meta name="msapplication-TileColor" content="#b7e3e4">
     <meta name="msapplication-TileImage" content="static/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#b7e3e4">
-    <link id="app-template" rel="stylesheet" href="static/css/app5.css">
+    <link id="app-template" rel="stylesheet" href="../static/css/appcss.css">
 </head>
 <body>
 <div class="app" id="japp">
@@ -97,7 +97,7 @@
     </style>
     <div class="page-container">
         <div class="logo">
-            <img src="../img/logo_minsa.jpg" alt="Ministerio de Salud - MINSA | Gobierno del Perú">
+            <img src="../static/img/logo_minsa.jpg" alt="Ministerio de Salud - MINSA | Gobierno del Perú">
         </div>
         <div class="titulo">
             CERTIFICADO DE VACUNACIÓN / VACCINATION CERTIFICATE
@@ -230,9 +230,12 @@
                 Fecha de Emisión / Date of Issue
             </div>
             <div>
-                16/11/2021 16:27
+                <span id="datetime"></span>
             </div>
         </div>
+    </div>
+    <div class="text-center" style="padding:1rem 0.2rem">
+        <button type="button" class="btn btn2 jBtnPrint">IMPRIMIR</button>
     </div>
 </div>
 <script>
@@ -243,6 +246,11 @@
         height: 90,
         margin: 1,
     });
+
+    var dt = new Date();
+    document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"/"+
+        (("0"+(dt.getMonth()+1)).slice(-2)) +"/"+ (dt.getFullYear()) +" "+
+        (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
 </script>
 </body>
 </html>

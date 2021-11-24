@@ -1,18 +1,11 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <!--    <base href="https://gis.minsa.gob.pe/CarneVacunacion/">-->
+    <base href="https://gis.minsa.gob.pe/CarneVacunacion/">
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-    <script type="text/javascript" src="../src/jquery.qrcode.js"></script>
-    <script type="text/javascript" src="../src/qrcode.js"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
+        function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-FWED2G8KFJ');
     </script>
@@ -43,7 +36,7 @@
     <meta name="msapplication-TileColor" content="#b7e3e4">
     <meta name="msapplication-TileImage" content="static/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#b7e3e4">
-    <link id="app-template" rel="stylesheet" href="../static/css/appcss.css">
+    <link id="app-template" rel="stylesheet" href="static/css/appcss.css">
 </head>
 <body>
 <div class="app" id="japp">
@@ -59,39 +52,32 @@
         * {
             box-sizing: border-box;
         }
-
         .page-container {
             padding: 30px 20px;
             max-width: 900px;
             margin: 0 auto;
             background: #fff;
         }
-
         .titulo {
             color: #75a5d0;
             text-align: center;
             font-weight: bold;
             padding: 0.5rem 0.2rem;
         }
-
-        .txt-titulo {
+        .txt-titulo{
             font-weight: bold;
         }
-
-        .txt-resultado {
+        .txt-resultado{
             font-size: 0.8rem;
         }
-
         .logo {
             text-align: center;
         }
-
         .logo img {
             width: 100%;
             max-width: 17rem;
         }
-
-        .linea {
+        .linea{
             display: block;
             border: none;
             margin-top: 8px;
@@ -100,23 +86,21 @@
             margin-right: auto;
             border-top: #e2e2e2 dashed 1px;
         }
-
-        .caja-vacunas {
-            border: #c8d5d5 solid 5px;
+        .caja-vacunas{
+            border: #c8d5d5  solid 5px;
             padding: 0.5rem;
             margin-top: 0.5rem;
         }
     </style>
     <div class="page-container">
         <div class="logo">
-            <img src="../static/img/logo_minsa.jpg" alt="Ministerio de Salud - MINSA | Gobierno del Perú">
+            <img src="https://gis.minsa.gob.pe/CarneVacunacion/1637714421857app/publico/certificado/img/logo_minsa.jpg" alt="Ministerio de Salud - MINSA | Gobierno del Perú">
         </div>
         <div class="titulo">
             CERTIFICADO DE VACUNACIÓN / VACCINATION CERTIFICATE
         </div>
         <div style="text-align: center; padding: 0.5rem 0;">
-            <!--            <canvas id="cImage-qr" style="width: 90px; margin: 0 auto;" height="90" width="90"></canvas>-->
-            <div id="qrcodeTable" align="center"></div>
+            <canvas id="cImage-qr" style="width: 200px; margin: 0 auto;" height="360" width="360"></canvas>
             <div>
                 Código QR de Validación / Validation QR Code
             </div>
@@ -126,28 +110,28 @@
             Nombre / Name
         </div>
         <div id="nombres-apellidos" class="txt-resultado">
-            JESSICA ALEJANDRA VIDAL SIFUENTES
+            CARLOS ANDRES WONG SOTOMAYOR
         </div>
         <hr class="linea">
         <div class="txt-titulo">
             Documento de Identidad / Identification document
         </div>
         <div id="nombres-apellidos" class="txt-resultado">
-            DNI: 47930292
+            DNI: 44794352
         </div>
         <hr class="linea">
         <div class="txt-titulo">
             Fecha de Nacimiento / Date of birth
         </div>
         <div id="nombres-apellidos" class="txt-resultado">
-            28/01/1993
+            07/01/1988
         </div>
         <hr class="linea">
         <div class="txt-titulo">
             Sexo / Sex
         </div>
         <div id="nombres-apellidos" class="txt-resultado">
-            F
+            M
         </div>
         <hr class="linea">
         <div class="txt-titulo">
@@ -176,12 +160,12 @@
                     Fecha de Vacunación / Vaccination Date
                 </div>
                 <div id="nombres-apellidos" class="txt-resultado">
-                    06/10/2021
+                    05/09/2021
                 </div>
                 <hr class="linea">
                 <div class="txt-titulo">
                     Vacuna / Vaccine
-                </div>
+       m         </div>
                 <div id="nombres-apellidos" class="txt-resultado">
                     Vacuna contra Covid
                 </div>
@@ -212,7 +196,7 @@
                     Fecha de Vacunación / Vaccination Date
                 </div>
                 <div id="nombres-apellidos" class="txt-resultado">
-                    20/10/2021
+                    26/09/2021
                 </div>
                 <hr class="linea">
                 <div class="txt-titulo">
@@ -242,7 +226,7 @@
                 Fecha de Emisión / Date of Issue
             </div>
             <div>
-                <span id="datetime"></span>
+                24/11/2021 09:58
             </div>
         </div>
     </div>
@@ -250,19 +234,5 @@
         <button type="button" class="btn btn2 jBtnPrint">IMPRIMIR</button>
     </div>
 </div>
-<script>
-    //jQuery('#qrcode').qrcode("this plugin is great");
-    jQuery('#qrcodeTable').qrcode({
-        text: "https://gis-minsa-gob-pe.github.io/carnevacunacion/cartillas/jessica.html",
-        width: 90,
-        height: 90,
-        margin: 1,
-    });
-
-    var dt = new Date();
-    document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"/"+
-        (("0"+(dt.getMonth()+1)).slice(-2)) +"/"+ (dt.getFullYear()) +" "+
-        (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
-</script>
 </body>
 </html>
