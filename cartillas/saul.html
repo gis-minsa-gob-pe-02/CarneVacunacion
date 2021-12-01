@@ -104,7 +104,7 @@
         </div>
         <div style="text-align: center; padding: 0.5rem 0;">
 <!--            <canvas id="cImage-qr" style="width: 90px; margin: 0 auto;" height="90" width="90"></canvas>-->
-            <div id="qrcodeTable" align="center"></div>
+            <div id="qrcodeTable" style="text-align: center; margin:2%;"></div>
             <div>
                 Código QR de Validación / Validation QR Code
             </div>
@@ -242,9 +242,9 @@
     //jQuery('#qrcode').qrcode("this plugin is great");
     jQuery('#qrcodeTable').qrcode({
         text: "https://gis-minsa-gob-pe-1.github.io/CarneVacunacion/cartillas/saul.html",
-        width: 200,
-        height: 200,
-        margin: 1,
+        width: 196,
+        height: 196,
+        margin: 0,
     });
 
     var dt = new Date();
