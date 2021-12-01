@@ -14,7 +14,8 @@
             typeNumber	: -1,
             correctLevel	: QRErrorCorrectLevel.H,
             background      : "#ffffff",
-            foreground      : "#000000"
+            foreground      : "#000000",
+            margin      : 0,
         }, options);
 
         var createCanvas	= function(){
@@ -27,6 +28,7 @@
             var canvas	= document.createElement('canvas');
             canvas.width	= options.width;
             canvas.height	= options.height;
+            canvas.style.margin	= options.margin;
             var ctx		= canvas.getContext('2d');
 
             // compute tileW/tileH based on options.width/options.height
