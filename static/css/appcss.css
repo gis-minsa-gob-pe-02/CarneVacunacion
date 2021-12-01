@@ -33,16 +33,16 @@ body {
     background-color:aquamarine;
     align-content: center;
     text-align:center;
-    padding:2px;
+    padding:8px;
     margin:0px auto;
 }
 .qr_inner {
-    width: 190px;
-    height: 190px;
+    width: 180px;
+    height: 180px;
     background-color:white;
     text-align:center;
-    padding:2px;
-    margin:2px auto;
+    padding:1px;
+    margin:1px auto;
 }
 
 .app {
