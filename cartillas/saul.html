@@ -1,17 +1,17 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-<!--    <base href="https://gis.minsa.gob.pe/CarneVacunacion/">-->
+    <!--    <base href="https://gis.minsa.gob.pe/CarneVacunacion/">-->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
     <script type="text/javascript" src="../src/jquery.qrcode.js"></script>
     <script type="text/javascript" src="../src/qrcode.js"></script>
-<!--    <script>-->
-<!--        window.dataLayer = window.dataLayer || [];-->
-<!--        function gtag(){dataLayer.push(arguments);}-->
-<!--        gtag('js', new Date());-->
-<!--        gtag('config', 'G-FWED2G8KFJ');-->
-<!--    </script>-->
+    <!--    <script>-->
+    <!--        window.dataLayer = window.dataLayer || [];-->
+    <!--        function gtag(){dataLayer.push(arguments);}-->
+    <!--        gtag('js', new Date());-->
+    <!--        gtag('config', 'G-FWED2G8KFJ');-->
+    <!--    </script>-->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Puedes verificar la aplicación de tu vacuna contra el coronavirus u otras que hayas recibido recientemente en el Carné de vacunación web del Ministerio de Salud. Aquí, está registrada la fecha y lugar donde se te inmunizó, además del tipo de vacuna que recibiste, el fabricante de la vacuna y el número de lote.">
     <meta name="keywords" content="Carnet Vacunas, Minsa, Covid19">
@@ -55,32 +55,39 @@
         * {
             box-sizing: border-box;
         }
+
         .page-container {
             padding: 30px 20px;
             max-width: 900px;
             margin: 0 auto;
             background: #fff;
         }
+
         .titulo {
             color: #75a5d0;
             text-align: center;
             font-weight: bold;
             padding: 0.5rem 0.2rem;
         }
-        .txt-titulo{
+
+        .txt-titulo {
             font-weight: bold;
         }
-        .txt-resultado{
+
+        .txt-resultado {
             font-size: 0.8rem;
         }
+
         .logo {
             text-align: center;
         }
+
         .logo img {
             width: 100%;
             max-width: 17rem;
         }
-        .linea{
+
+        .linea {
             display: block;
             border: none;
             margin-top: 8px;
@@ -89,8 +96,9 @@
             margin-right: auto;
             border-top: #e2e2e2 dashed 1px;
         }
-        .caja-vacunas{
-            border: #c8d5d5  solid 5px;
+
+        .caja-vacunas {
+            border: #c8d5d5 solid 5px;
             padding: 0.5rem;
             margin-top: 0.5rem;
         }
@@ -102,9 +110,12 @@
         <div class="titulo">
             CERTIFICADO DE VACUNACIÓN / VACCINATION CERTIFICATE
         </div>
-        <div style="text-align: center; padding: 0.5rem 0;">
-<!--            <canvas id="cImage-qr" style="width: 90px; margin: 0 auto;" height="90" width="90"></canvas>-->
-            <div id="qrcodeTable" style="text-align: center; margin:3%;"></div>
+        <div style="text-align: center; padding: 0.5rem 0; align-items: center">
+            <!--            <canvas id="cImage-qr" style="width: 90px; margin: 0 auto;" height="90" width="90"></canvas>-->
+            <div class="qr_outer">
+<!--                <div id="qrcodeTable" style="text-align: center; margin:3%;"></div>-->
+                <div id="qrcodeTable" class="qr_inner"></div>
+            </div>
             <div>
                 Código QR de Validación / Validation QR Code
             </div>
@@ -242,15 +253,15 @@
     //jQuery('#qrcode').qrcode("this plugin is great");
     jQuery('#qrcodeTable').qrcode({
         text: "https://gis-minsa-gob-pe-02.github.io/CarneVacunacion/cartillas/saul.html",
-        width: 180,
-        height: 180,
-        margin: "2px",
+        width: 190,
+        height: 190,
+        margin: "0px",
     });
 
     var dt = new Date();
-    document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"/"+
-        (("0"+(dt.getMonth()+1)).slice(-2)) +"/"+ (dt.getFullYear()) +" "+
-        (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
+    document.getElementById("datetime").innerHTML = (("0" + dt.getDate()).slice(-2)) + "/" +
+        (("0" + (dt.getMonth() + 1)).slice(-2)) + "/" + (dt.getFullYear()) + " " +
+        (("0" + dt.getHours()).slice(-2)) + ":" + (("0" + dt.getMinutes()).slice(-2));
 </script>
 </body>
 </html>
