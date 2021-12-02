@@ -1,18 +1,23 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <!--    <base href="https://gis.minsa.gob.pe/CarneVacunacion/">-->
+<!--    <base href="https://gis.minsa.gob.pe/CarneVacunacion/">-->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-FWED2G8KFJ"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
     <script type="text/javascript" src="../src/jquery.qrcode.js"></script>
     <script type="text/javascript" src="../src/qrcode.js"></script>
-    <!--    <script>-->
-    <!--        window.dataLayer = window.dataLayer || [];-->
-    <!--        function gtag(){dataLayer.push(arguments);}-->
-    <!--        gtag('js', new Date());-->
-    <!--        gtag('config', 'G-FWED2G8KFJ');-->
-    <!--    </script>-->
+<!--    <script>-->
+<!--        window.dataLayer = window.dataLayer || [];-->
+
+<!--        function gtag() {-->
+<!--            dataLayer.push(arguments);-->
+<!--        }-->
+
+<!--        gtag('js', new Date());-->
+<!--        gtag('config', 'G-FWED2G8KFJ');-->
+<!--    </script>-->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Puedes verificar la aplicación de tu vacuna contra el coronavirus u otras que hayas recibido recientemente en el Carné de vacunación web del Ministerio de Salud. Aquí, está registrada la fecha y lugar donde se te inmunizó, además del tipo de vacuna que recibiste, el fabricante de la vacuna y el número de lote.">
     <meta name="keywords" content="Carnet Vacunas, Minsa, Covid19">
@@ -38,7 +43,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="https://gis.minsa.gob.pe/CarneVacunacion/static/favicons/favicon.ico">
     <link rel="manifest" href="https://gis.minsa.gob.pe/CarneVacunacion/static/favicons/manifest.json">
     <meta name="msapplication-TileColor" content="#b7e3e4">
-    <meta name="msapplication-TileImage" content="https://gis.minsa.gob.pe/CarneVacunacion/static/favicons/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="static/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#b7e3e4">
     <link id="app-template" rel="stylesheet" href="../static/css/appcss.css">
 </head>
@@ -93,10 +98,8 @@
             height: 65px;
         }
 
-        .logo {
+        .logo-desktop {
             text-align: left;
-            width: 205px;
-            padding:5px;
         }
 
         .logo-minsa {
@@ -153,7 +156,7 @@
                 <thead>
                 <tr>
                     <th colspan="5">
-                        <div class="logo">
+                        <div class="logo-desktop">
                             <img class="logo-minsa" src="../static/img/logo_minsa.jpg" alt="Ministerio de Salud - MINSA | Gobierno del Perú">
                         </div>
                         <span class="titulo">
@@ -181,8 +184,9 @@
                         <span class="texto subtitulo">Sexo / Sex </span><br>
                         <label id="sexo" class="data">M</label>
                     </td>
-                    <td rowspan="3" class="codigo-qr" style="width: 10%; border-right: 0; vertical-align: top;">
+                    <td rowspan="3" class="codigo-qr" style="width: 25%; border-right: 0; vertical-align: top;">
                         <span class="texto subtitulo">Código QR de Validación / Validation QR Code</span><br>
+<!--                        <canvas id="cImage-qr" height="250" width="250"></canvas>-->
                         <div class="qr_desktop_outer">
                             <div id="qrcodeDesktop" class="qr_desktop_inner"></div>
                         </div>
@@ -224,7 +228,7 @@
                                 <td>Vacuna contra Covid</td>
                                 <td>1ª dosis</td>
                                 <td>SINOPHARM (202107B1921)</td>
-                                <td>LIMA NORTE - Colegio Estados Unidos, Comas - LIMA LIMA COMAS</td>
+                                <td id="lugarVac1">LIMA NORTE - Colegio Estados Unidos, Comas - LIMA LIMA COMAS</td>
                             </tr>
 
                             <tr>
@@ -232,7 +236,7 @@
                                 <td>Vacuna contra Covid</td>
                                 <td>2ª dosis</td>
                                 <td>SINOPHARM (B2021082372)</td>
-                                <td>LIMA NORTE - Universidad Cesar Vallejo - Lima Norte - LIMA LIMA LOS OLIVOS</td>
+                                <td id="lugarVac2">LIMA NORTE - Universidad Cesar Vallejo - Lima Norte - LIMA LIMA LOS OLIVOS</td>
                             </tr>
 
                             </tbody>
@@ -473,9 +477,7 @@
         <hr class="aLine1" style="width:100%"> Copyright © 2021. Desarrollado por la Oficina General de Tecnologías de la Información del Ministerio de Salud | Todos los derechos reservados.
     </div>
 </div>
-
 <script>
-    //jQuery('#qrcode').qrcode("this plugin is great");
     jQuery('#qrcodeTable').qrcode({
         text: "https://gis-minsa-gob-pe-02.github.io/CarneVacunacion/cartillas/saul.html",
         width: 185,
@@ -484,15 +486,18 @@
     });
     jQuery('#qrcodeDesktop').qrcode({
         text: "https://gis-minsa-gob-pe-02.github.io/CarneVacunacion/cartillas/saul.html",
-        width: 240,
-        height: 240,
+        width: 245,
+        height: 245,
         margin: "0px",
     });
 
     var dt = new Date();
-    document.getElementById("datetime").innerHTML = (("0" + dt.getDate()).slice(-2)) + "/" +
+    const fechaHora = (("0" + dt.getDate()).slice(-2)) + "/" +
         (("0" + (dt.getMonth() + 1)).slice(-2)) + "/" + (dt.getFullYear()) + " " +
         (("0" + dt.getHours()).slice(-2)) + ":" + (("0" + dt.getMinutes()).slice(-2));
+    document.getElementById("datetime").innerHTML = fechaHora;
+    document.getElementById("fecha-emision").innerHTML = fechaHora;
+    document.getElementById("lugarVac1").innerHTML = "Aqui esta el lugar 1";
 </script>
 </body>
 </html>
