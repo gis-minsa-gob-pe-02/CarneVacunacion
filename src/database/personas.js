@@ -29,7 +29,7 @@ const datos = [
         codigo: "vocjigkfrl7d8b9k2to1q55s93",
         nombre: "JESSICA ALEJANDRA VIDAL SIFUENTES",
         dni: "DNI: 47930292",
-        fechaNac: "28/02/1993",
+        fechaNac: "28/01/1993",
         sexo: "F",
         fechaDosis1: "06/10/2021",
         fabriLote1: "SINOPHARM (202107B1919)",
