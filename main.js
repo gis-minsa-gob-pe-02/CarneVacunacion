@@ -1,4 +1,4 @@
-import {datosPersonales} from "./src/database";
+import {datosPersonales} from "src/database";
 var ul = document.createElement('ul');
 for (let persona of datosPersonales){
     // Create anchor element.
