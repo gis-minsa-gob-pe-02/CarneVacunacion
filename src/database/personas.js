@@ -1,6 +1,6 @@
 const datos = [
     {
-        codigo: "000001",
+        codigo: "vocjigkfrl7d8b9k2to1q55s91",
         nombre: "HILTON SAUL VIDAL SIFUENTES",
         dni: "DNI: 41370826",
         fechaNac: "05/04/1982",
@@ -13,7 +13,7 @@ const datos = [
         lugarVac2: "LIMA SUR - Estadio Galvez Chipoco - LIMA LIMA BARRANCO",
     },
     {
-        codigo: "000002",
+        codigo: "vocjigkfrl7d8b9k2to1q55s92",
         nombre: "LADY DIANA CASAS HURTADO",
         dni: "DNI: 41615205",
         fechaNac: "20/02/1982",
@@ -26,7 +26,7 @@ const datos = [
         lugarVac2: "LIMA SUR - Estadio Galvez Chipoco - LIMA LIMA BARRANCO",
     },
     {
-        codigo: "000003",
+        codigo: "vocjigkfrl7d8b9k2to1q55s93",
         nombre: "JESSICA ALEJANDRA VIDAL SIFUENTES",
         dni: "DNI: 47930292",
         fechaNac: "28/02/1993",
