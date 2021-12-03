@@ -6,8 +6,8 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-FWED2G8KFJ"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-    <script type="text/javascript" src="../src/jquery.qrcode.js"></script>
-    <script type="text/javascript" src="../src/qrcode.js"></script>
+    <script type="text/javascript" src="../../src/jquery.qrcode.js"></script>
+    <script type="text/javascript" src="../../src/qrcode.js"></script>
 <!--    <script>-->
 <!--        window.dataLayer = window.dataLayer || [];-->
 
@@ -45,7 +45,7 @@
     <meta name="msapplication-TileColor" content="#b7e3e4">
     <meta name="msapplication-TileImage" content="static/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#b7e3e4">
-    <link id="app-template" rel="stylesheet" href="../static/css/appcss.css">
+    <link id="app-template" rel="stylesheet" href="../../static/css/appcss.css">
 </head>
 <body style="">
 <div class = "app" id = "content-desktop">
@@ -157,7 +157,7 @@
                 <tr>
                     <th colspan="5">
                         <div class="logo-desktop">
-                            <img class="logo-minsa" src="../static/img/logo_minsa.jpg" alt="Ministerio de Salud - MINSA | Gobierno del Perú">
+                            <img class="logo-minsa" src="../../static/img/logo_minsa.jpg" alt="Ministerio de Salud - MINSA | Gobierno del Perú">
                         </div>
                         <span class="titulo">
                                 CERTIFICADO DE VACUNACIÓN / VACCINATION CERTIFICATE
@@ -172,17 +172,17 @@
                                 Nombre / Name
                             </span>
                         <br>
-                        <label id="nombres-apellidos" class="data">RAUL FELIPE HUACHACA ISASI</label>
+                        <label id="nombre" class="data"></label>
                     </td>
                     <td style="width: 20%; vertical-align: top;">
                             <span class="texto subtitulo">
                                 Fecha de Nacimiento / Date of birth
                             </span><br>
-                        <label id="fecha-nacimiento" class="data">19/02/1985</label>
+                        <label id="fechaNac" class="data"></label>
                     </td>
                     <td style="width: 15%; vertical-align: top;">
                         <span class="texto subtitulo">Sexo / Sex </span><br>
-                        <label id="sexo" class="data">M</label>
+                        <label id="sexo" class="data"></label>
                     </td>
                     <td rowspan="3" class="codigo-qr" style="width: 25%; border-right: 0; vertical-align: top;">
                         <span class="texto subtitulo">Código QR de Validación / Validation QR Code</span><br>
@@ -195,7 +195,7 @@
                 <tr>
                     <td colspan="2" style="vertical-align: top;">
                         <span class="texto subtitulo">Documento de Identidad / Identification document</span><br>
-                        <label id="tipo-numero-documento" class="data">DNI: 42956755</label>
+                        <label id="dni" class="data"></label>
 
                     </td>
                     <td colspan="2" style="vertical-align: top;">
@@ -224,19 +224,19 @@
                             <tbody>
 
                             <tr>
-                                <td>29/08/2021</td>
+                                <td id="fechaVac1"></td>
                                 <td>Vacuna contra Covid</td>
                                 <td>1ª dosis</td>
-                                <td>SINOPHARM (202107B1921)</td>
-                                <td id="lugarVac1">LIMA NORTE - Colegio Estados Unidos, Comas - LIMA LIMA COMAS</td>
+                                <td id="fabriLote1"></td>
+                                <td id="lugarVac1"></td>
                             </tr>
 
                             <tr>
-                                <td>19/09/2021</td>
-                                <td>Vacuna contra Covid</td>
+                                <td id="fechaVac2"></td>
+                                <td >Vacuna contra Covid</td>
                                 <td>2ª dosis</td>
-                                <td>SINOPHARM (B2021082372)</td>
-                                <td id="lugarVac2">LIMA NORTE - Universidad Cesar Vallejo - Lima Norte - LIMA LIMA LOS OLIVOS</td>
+                                <td id="fabriLote2"></td>
+                                <td id="lugarVac2"></td>
                             </tr>
 
                             </tbody>
@@ -247,7 +247,7 @@
                 <tr>
                     <td style="width: 25%; border-bottom: 0; vertical-align: top;">
                         <span class="texto subtitulo">Fecha de Emisión / Date of Issue</span><br>
-                        <label id="fecha-emision" class="data">01/12/2021 22:47</label>
+                        <label id="fecha-emision" class="data"></label>
                     </td>
                     <td colspan="4" style="width: 75%; border-right: 0; border-bottom: 0;"></td>
                 </tr>
@@ -332,7 +332,7 @@
     </style>
     <div class="page-container">
         <div class="logo">
-            <img src="../static/img/logo_minsa.jpg" alt="Ministerio de Salud - MINSA | Gobierno del Perú">
+            <img src="../../static/img/logo_minsa.jpg" alt="Ministerio de Salud - MINSA | Gobierno del Perú">
         </div>
         <div class="titulo">
             CERTIFICADO DE VACUNACIÓN / VACCINATION CERTIFICATE
@@ -349,29 +349,29 @@
         <div class="txt-titulo">
             Nombre / Name
         </div>
-        <div id="nombres-apellidos" class="txt-resultado">
-            HILTON SAUL VIDAL SIFUENTES
+        <div id="nombre" class="txt-resultado">
+
         </div>
         <hr class="linea">
         <div class="txt-titulo">
             Documento de Identidad / Identification document
         </div>
         <div id="dni" class="txt-resultado">
-            DNI: 41370826
+
         </div>
         <hr class="linea">
         <div class="txt-titulo">
             Fecha de Nacimiento / Date of birth
         </div>
         <div id="fechaNac" class="txt-resultado">
-            05/04/1982
+
         </div>
         <hr class="linea">
         <div class="txt-titulo">
             Sexo / Sex
         </div>
         <div id="sexo" class="txt-resultado">
-            M
+
         </div>
         <hr class="linea">
         <div class="txt-titulo">
@@ -392,7 +392,7 @@
                 <div class="txt-titulo" style="color: #848f8f;">
                     Dosis / Dose
                 </div>
-                <div id="nombres-apellidos" class="txt-resultado">
+                <div class="txt-resultado">
                     1ª dosis
                 </div>
                 <hr class="linea">
@@ -400,13 +400,13 @@
                     Fecha de Vacunación / Vaccination Date
                 </div>
                 <div id="fechaDosis1" class="txt-resultado">
-                    06/10/2021
+
                 </div>
                 <hr class="linea">
                 <div class="txt-titulo">
                     Vacuna / Vaccine
                 </div>
-                <div id="nombres-apellidos" class="txt-resultado">
+                <div class="txt-resultado">
                     Vacuna contra Covid
                 </div>
                 <hr class="linea">
@@ -414,21 +414,21 @@
                     Fabricante y Lote de Vacuna / Product Name and Manufacturer Lot Number
                 </div>
                 <div id="fabriLote1" class="txt-resultado">
-                    SINOPHARM (202107B1919)
+
                 </div>
                 <hr class="linea">
                 <div class="txt-titulo">
                     Lugar de Vacunación / Vaccination Place
                 </div>
                 <div id="lugarVac1" class="txt-resultado">
-                    LIMA SUR - Estadio Galvez Chipoco - LIMA LIMA BARRANCO
+
                 </div>
             </div>
             <div class="caja-vacunas">
                 <div class="txt-titulo" style="color: #848f8f;">
                     Dosis / Dose
                 </div>
-                <div id="nombres-apellidos" class="txt-resultado">
+                <div class="txt-resultado">
                     2ª dosis
                 </div>
                 <hr class="linea">
@@ -436,13 +436,13 @@
                     Fecha de Vacunación / Vaccination Date
                 </div>
                 <div id="fechaDosis2" class="txt-resultado">
-                    20/10/2021
+
                 </div>
                 <hr class="linea">
                 <div class="txt-titulo">
                     Vacuna / Vaccine
                 </div>
-                <div id="nombres-apellidos" class="txt-resultado">
+                <div class="txt-resultado">
                     Vacuna contra Covid
                 </div>
                 <hr class="linea">
@@ -450,14 +450,14 @@
                     Fabricante y Lote de Vacuna / Product Name and Manufacturer Lot Number
                 </div>
                 <div id="fabriLote2" class="txt-resultado">
-                    SINOPHARM (B2021082360)
+
                 </div>
                 <hr class="linea">
                 <div class="txt-titulo">
                     Lugar de Vacunación / Vaccination Place
                 </div>
                 <div id="lugarVac2" class="txt-resultado">
-                    LIMA SUR - Estadio Galvez Chipoco - LIMA LIMA BARRANCO
+
                 </div>
             </div>
         </div>
@@ -477,27 +477,27 @@
         <hr class="aLine1" style="width:100%"> Copyright © 2021. Desarrollado por la Oficina General de Tecnologías de la Información del Ministerio de Salud | Todos los derechos reservados.
     </div>
 </div>
-<script>
-    jQuery('#qrcodeTable').qrcode({
-        text: "https://gis-minsa-gob-pe-02.github.io/CarneVacunacion/cartillas/saul.html",
-        width: 185,
-        height: 185,
-        margin: "0px",
-    });
-    jQuery('#qrcodeDesktop').qrcode({
-        text: "https://gis-minsa-gob-pe-02.github.io/CarneVacunacion/cartillas/saul.html",
-        width: 245,
-        height: 245,
-        margin: "0px",
-    });
-
-    var dt = new Date();
-    const fechaHora = (("0" + dt.getDate()).slice(-2)) + "/" +
-        (("0" + (dt.getMonth() + 1)).slice(-2)) + "/" + (dt.getFullYear()) + " " +
-        (("0" + dt.getHours()).slice(-2)) + ":" + (("0" + dt.getMinutes()).slice(-2));
-    document.getElementById("datetime").innerHTML = fechaHora;
-    document.getElementById("fecha-emision").innerHTML = fechaHora;
-    document.getElementById("lugarVac1").innerHTML = "Aqui esta el lugar 1";
+<script src="../../src/main.js" type="module">
+    // jQuery('#qrcodeTable').qrcode({
+    //     text: "https://gis-minsa-gob-pe-02.github.io/CarneVacunacion/cartillas/saul.html",
+    //     width: 185,
+    //     height: 185,
+    //     margin: "0px",
+    // });
+    // jQuery('#qrcodeDesktop').qrcode({
+    //     text: "https://gis-minsa-gob-pe-02.github.io/CarneVacunacion/cartillas/saul.html",
+    //     width: 245,
+    //     height: 245,
+    //     margin: "0px",
+    // });
+    //
+    // var dt = new Date();
+    // const fechaHora = (("0" + dt.getDate()).slice(-2)) + "/" +
+    //     (("0" + (dt.getMonth() + 1)).slice(-2)) + "/" + (dt.getFullYear()) + " " +
+    //     (("0" + dt.getHours()).slice(-2)) + ":" + (("0" + dt.getMinutes()).slice(-2));
+    // document.getElementById("datetime").innerHTML = fechaHora;
+    // document.getElementById("fecha-emision").innerHTML = fechaHora;
+    // document.getElementById("lugarVac1").innerHTML = "Aqui esta el lugar 1";
 </script>
 </body>
 </html>

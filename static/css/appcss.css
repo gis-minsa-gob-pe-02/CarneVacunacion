@@ -695,7 +695,7 @@ nav ul li a:hover {
 .aLine1 {
     border: none;
     border-bottom: #dedede dashed 1px;
-    margin: 1rem .1rem;
+    margin: 0.5rem .1rem;
     padding: 0;
     width: 100%
 }
