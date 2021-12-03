@@ -1,4 +1,4 @@
-import {PERSONA_FROM_CODIGO} from "../src/database/index";
+import {PERSONA_FROM_CODIGO} from "./database/personas.js";
 
 function getParamByName(paramName){
     let paramValue = "";
