@@ -37,7 +37,7 @@ const datos = [
         fechaDosis2: "20/10/2021",
         fabriLote2: "SINOPHARM (B2021082360)",
         lugarVac2: "LIMA SUR - Estadio Galvez Chipoco - LIMA LIMA BARRANCO",
-    }
+    },
     {
         codigo: "vocjigkfrl7d8b9k2to1q55s94",
         nombre: "ROSA BLANCA VIDAL SIFUENTES",
