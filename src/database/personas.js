@@ -38,6 +38,19 @@ const datos = [
         fabriLote2: "SINOPHARM (B2021082360)",
         lugarVac2: "LIMA SUR - Estadio Galvez Chipoco - LIMA LIMA BARRANCO",
     }
+    {
+        codigo: "vocjigkfrl7d8b9k2to1q55s94",
+        nombre: "ROSA BLANCA VIDAL SIFUENTES",
+        dni: "DNI: 44237368",
+        fechaNac: "25/09/1986",
+        sexo: "F",
+        fechaDosis1: "10/09/2021",
+        fabriLote1: "SINOPHARM (202107B1919)",
+        lugarVac1: "LIMA SUR - Estadio Galvez Chipoco - LIMA LIMA BARRANCO",
+        fechaDosis2: "30/11/2021",
+        fabriLote2: "SINOPHARM (B2021082360)",
+        lugarVac2: "LIMA SUR - Estadio Galvez Chipoco - LIMA LIMA BARRANCO",
+    }
 ]
 
 export const datosPersonales = datos;
