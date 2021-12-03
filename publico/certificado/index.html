@@ -2,22 +2,10 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-<!--    <base href="https://gis.minsa.gob.pe/CarneVacunacion/">-->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-FWED2G8KFJ"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
     <script type="text/javascript" src="../../src/jquery.qrcode.js"></script>
     <script type="text/javascript" src="../../src/qrcode.js"></script>
-<!--    <script>-->
-<!--        window.dataLayer = window.dataLayer || [];-->
-
-<!--        function gtag() {-->
-<!--            dataLayer.push(arguments);-->
-<!--        }-->
-
-<!--        gtag('js', new Date());-->
-<!--        gtag('config', 'G-FWED2G8KFJ');-->
-<!--    </script>-->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Puedes verificar la aplicación de tu vacuna contra el coronavirus u otras que hayas recibido recientemente en el Carné de vacunación web del Ministerio de Salud. Aquí, está registrada la fecha y lugar donde se te inmunizó, además del tipo de vacuna que recibiste, el fabricante de la vacuna y el número de lote.">
     <meta name="keywords" content="Carnet Vacunas, Minsa, Covid19">
@@ -48,7 +36,7 @@
     <link id="app-template" rel="stylesheet" href="../../static/css/appcss.css">
 </head>
 <body style="">
-<div class = "app" id = "content-desktop">
+<div class = "app printable" id = "content-desktop">
     <style>
         body {
             font-family: sans-serif;
@@ -260,7 +248,7 @@
         </div>
     </div>
 </div>
-<div class="app" id="content-mobile">
+<div class="app non-printable" id="content-mobile">
     <style>
         body {
             font-family: sans-serif;
@@ -471,7 +459,7 @@
         </div>
     </div>
     <div class="text-center" style="padding:1rem 0.2rem">
-        <button type="button" class="btn btn2 jBtnPrint">IMPRIMIR</button>
+        <button type="button" class="btn btn2 jBtnPrint" onclick="window.print()">IMPRIMIR</button>
     </div>
     <div class="text-center" style="color:#5c5c5c; padding:0 0.2rem 0.7rem; font-size:0.8rem">
         <hr class="aLine1" style="width:100%"> Copyright © 2021. Desarrollado por la Oficina General de Tecnologías de la Información del Ministerio de Salud | Todos los derechos reservados.
