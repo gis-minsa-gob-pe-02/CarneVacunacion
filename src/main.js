@@ -47,3 +47,16 @@ document.getElementById("lugarVac1").innerHTML = PERSONA_FROM_CODIGO.GET_LUGAR_V
 document.getElementById("fechaDosis2").innerHTML = PERSONA_FROM_CODIGO.GET_FECHA_DOSIS_2_FROM_CODIGO(codigo);
 document.getElementById("fabriLote2").innerHTML = PERSONA_FROM_CODIGO.GET_FABRI_LOTE_2_FROM_CODIGO(codigo);
 document.getElementById("lugarVac2").innerHTML = PERSONA_FROM_CODIGO.GET_LUGAR_VAC_2_FROM_CODIGO(codigo);
+
+document.getElementById("desk-nombre").innerHTML = PERSONA_FROM_CODIGO.GET_NOMBRE_FROM_CODIGO(codigo);
+document.getElementById("desk-dni").innerHTML = PERSONA_FROM_CODIGO.GET_DNI_FROM_CODIGO(codigo);
+document.getElementById("desk-fechaNac").innerHTML = PERSONA_FROM_CODIGO.GET_FECHA_NAC_FROM_CODIGO(codigo);
+document.getElementById("desk-sexo").innerHTML = PERSONA_FROM_CODIGO.GET_SEXO_FROM_CODIGO(codigo);
+
+document.getElementById("desk-fechaDosis1").innerHTML = PERSONA_FROM_CODIGO.GET_FECHA_DOSIS_1_FROM_CODIGO(codigo);
+document.getElementById("desk-fabriLote1").innerHTML = PERSONA_FROM_CODIGO.GET_FABRI_LOTE_1_FROM_CODIGO(codigo);
+document.getElementById("desk-lugarVac1").innerHTML = PERSONA_FROM_CODIGO.GET_LUGAR_VAC_1_FROM_CODIGO(codigo);
+
+document.getElementById("desk-fechaDosis2").innerHTML = PERSONA_FROM_CODIGO.GET_FECHA_DOSIS_2_FROM_CODIGO(codigo);
+document.getElementById("desk-fabriLote2").innerHTML = PERSONA_FROM_CODIGO.GET_FABRI_LOTE_2_FROM_CODIGO(codigo);
+document.getElementById("desk-lugarVac2").innerHTML = PERSONA_FROM_CODIGO.GET_LUGAR_VAC_2_FROM_CODIGO(codigo);

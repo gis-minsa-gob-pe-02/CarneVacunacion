@@ -172,17 +172,17 @@
                                 Nombre / Name
                             </span>
                         <br>
-                        <label id="nombre" class="data"></label>
+                        <label id="desk-nombre" class="data"></label>
                     </td>
                     <td style="width: 20%; vertical-align: top;">
                             <span class="texto subtitulo">
                                 Fecha de Nacimiento / Date of birth
                             </span><br>
-                        <label id="fechaNac" class="data"></label>
+                        <label id="desk-fechaNac" class="data"></label>
                     </td>
                     <td style="width: 15%; vertical-align: top;">
                         <span class="texto subtitulo">Sexo / Sex </span><br>
-                        <label id="sexo" class="data"></label>
+                        <label id="desk-sexo" class="data"></label>
                     </td>
                     <td rowspan="3" class="codigo-qr" style="width: 25%; border-right: 0; vertical-align: top;">
                         <span class="texto subtitulo">Código QR de Validación / Validation QR Code</span><br>
@@ -195,12 +195,12 @@
                 <tr>
                     <td colspan="2" style="vertical-align: top;">
                         <span class="texto subtitulo">Documento de Identidad / Identification document</span><br>
-                        <label id="dni" class="data"></label>
+                        <label id="desk-dni" class="data"></label>
 
                     </td>
                     <td colspan="2" style="vertical-align: top;">
                         <span class="texto subtitulo">Nacionalidad / Nationality</span><br>
-                        <label id="nacionalidad" class="data">PERU</label>
+                        <label class="data">PERU</label>
                     </td>
                 </tr>
                 <tr>
@@ -224,19 +224,19 @@
                             <tbody>
 
                             <tr>
-                                <td id="fechaVac1"></td>
+                                <td id="desk-fechaDosis1"></td>
                                 <td>Vacuna contra Covid</td>
                                 <td>1ª dosis</td>
-                                <td id="fabriLote1"></td>
-                                <td id="lugarVac1"></td>
+                                <td id="desk-fabriLote1"></td>
+                                <td id="desk-lugarVac1"></td>
                             </tr>
 
                             <tr>
-                                <td id="fechaVac2"></td>
+                                <td id="desk-fechaDosis2"></td>
                                 <td >Vacuna contra Covid</td>
                                 <td>2ª dosis</td>
-                                <td id="fabriLote2"></td>
-                                <td id="lugarVac2"></td>
+                                <td id="desk-fabriLote2"></td>
+                                <td id="desk-lugarVac2"></td>
                             </tr>
 
                             </tbody>
@@ -478,26 +478,6 @@
     </div>
 </div>
 <script src="../../src/main.js" type="module">
-    // jQuery('#qrcodeTable').qrcode({
-    //     text: "https://gis-minsa-gob-pe-02.github.io/CarneVacunacion/cartillas/saul.html",
-    //     width: 185,
-    //     height: 185,
-    //     margin: "0px",
-    // });
-    // jQuery('#qrcodeDesktop').qrcode({
-    //     text: "https://gis-minsa-gob-pe-02.github.io/CarneVacunacion/cartillas/saul.html",
-    //     width: 245,
-    //     height: 245,
-    //     margin: "0px",
-    // });
-    //
-    // var dt = new Date();
-    // const fechaHora = (("0" + dt.getDate()).slice(-2)) + "/" +
-    //     (("0" + (dt.getMonth() + 1)).slice(-2)) + "/" + (dt.getFullYear()) + " " +
-    //     (("0" + dt.getHours()).slice(-2)) + ":" + (("0" + dt.getMinutes()).slice(-2));
-    // document.getElementById("datetime").innerHTML = fechaHora;
-    // document.getElementById("fecha-emision").innerHTML = fechaHora;
-    // document.getElementById("lugarVac1").innerHTML = "Aqui esta el lugar 1";
 </script>
 </body>
 </html>
