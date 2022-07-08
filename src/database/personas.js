@@ -11,6 +11,9 @@ const datos = [
         fechaDosis2: "23/10/2021",
         fabriLote2: "SINOPHARM (B2021082360)",
         lugarVac2: "LIMA SUR - Estadio Galvez Chipoco - LIMA LIMA BARRANCO",
+        fechaDosis3: "08/01/2022",
+        fabriLote3: "PFIZER (340308D)",
+        lugarVac3: "LIMA SUR - Estadio Galvez Chipoco - LIMA LIMA BARRANCO",
     },
     {
         codigo: "vocjigkfrl7d8b9k2to1q55s92",
@@ -24,6 +27,9 @@ const datos = [
         fechaDosis2: "23/10/2021",
         fabriLote2: "SINOPHARM (B2021082360)",
         lugarVac2: "LIMA SUR - Estadio Galvez Chipoco - LIMA LIMA BARRANCO",
+        fechaDosis3: "08/01/2022",
+        fabriLote3: "PFIZER (340308D)",
+        lugarVac3: "LIMA SUR - Estadio Galvez Chipoco - LIMA LIMA BARRANCO",
     },
     {
         codigo: "vocjigkfrl7d8b9k2to1q55s93",
@@ -65,6 +71,9 @@ const GET_LUGAR_VAC_1_FROM_CODIGO = (codigo) => datos.filter(x => x.codigo === c
 const GET_FECHA_DOSIS_2_FROM_CODIGO = (codigo) => datos.filter(x => x.codigo === codigo)[0].fechaDosis2;
 const GET_FABRI_LOTE_2_FROM_CODIGO = (codigo) => datos.filter(x => x.codigo === codigo)[0].fabriLote2;
 const GET_LUGAR_VAC_2_FROM_CODIGO = (codigo) => datos.filter(x => x.codigo === codigo)[0].lugarVac2;
+const GET_FECHA_DOSIS_3_FROM_CODIGO = (codigo) => datos.filter(x => x.codigo === codigo)[0].fechaDosis3;
+const GET_FABRI_LOTE_3_FROM_CODIGO = (codigo) => datos.filter(x => x.codigo === codigo)[0].fabriLote3;
+const GET_LUGAR_VAC_3_FROM_CODIGO = (codigo) => datos.filter(x => x.codigo === codigo)[0].lugarVac3;
 
 export const codigos = datos.map(x=>x.codigo);
 
@@ -79,5 +88,8 @@ export const PERSONA_FROM_CODIGO = {
     GET_FECHA_DOSIS_2_FROM_CODIGO: GET_FECHA_DOSIS_2_FROM_CODIGO,
     GET_FABRI_LOTE_2_FROM_CODIGO: GET_FABRI_LOTE_2_FROM_CODIGO,
     GET_LUGAR_VAC_2_FROM_CODIGO: GET_LUGAR_VAC_2_FROM_CODIGO,
+    GET_FECHA_DOSIS_3_FROM_CODIGO: GET_FECHA_DOSIS_3_FROM_CODIGO,
+    GET_FABRI_LOTE_3_FROM_CODIGO: GET_FABRI_LOTE_3_FROM_CODIGO,
+    GET_LUGAR_VAC_3_FROM_CODIGO: GET_LUGAR_VAC_3_FROM_CODIGO,
 }
 
